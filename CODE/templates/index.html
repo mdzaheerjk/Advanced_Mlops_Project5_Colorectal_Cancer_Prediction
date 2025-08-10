@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorectal Cancer Prediction</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Colorectal Cancer Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="healthcare_costs">Healthcare Costs:</label>
+            <input type="number" step="0.01" id="healthcare_costs" name="healthcare_costs" required>
+            
+            <label for="tumor_size">Tumor Size (mm):</label>
+            <input type="number" step="0.01" id="tumor_size" name="tumor_size" required>
+            
+            <label for="mortality_rate">Mortality Rate per 100K:</label>
+            <input type="number" step="0.01" id="mortality_rate" name="mortality_rate" required>
+            
+            <label for="treatment_type">Treatment Type:</label>
+            <input type="number" id="treatment_type" name="treatment_type" required>
+            
+            <label for="diabetes">Diabetes (0/1):</label>
+            <input type="number" id="diabetes" name="diabetes" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+            <h3>Prediction : {{ prediction }}</h3>
+        {% endif %}
+
+    </div>
+</body>
+</html>

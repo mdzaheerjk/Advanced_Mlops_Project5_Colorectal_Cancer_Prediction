@@ -1,0 +1,8 @@
+--------------------------------------------------- EXPERIMENT TRACKING DAGSHUB -----------------------------------------
+
+
+set MLFLOW_TRACKING_URI=
+
+set MLFLOW_TRACKING_USERNAME=
+
+set MLFLOW_TRACKING_PASSWORD=
